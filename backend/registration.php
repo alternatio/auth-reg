@@ -12,9 +12,9 @@ function registration(mysqli $connection, string $login, string $password)
 
   if (mysqli_num_rows($count) == 0) {
 
-    $add_user_query = "INSERT INTO `users` (`id`, `login`, `password`, `role`, `last_auth`) VALUES (NULL, '$login', '$password', NULL, NULL)";
+    $add_user_query = "INSERT INTO `users` (`id`, `login`, `password`, `role`, `last_auth`) VALUES (NULL, '$login', '$password', '2', CURRENT_TIMESTAMP)";
 
-    $connection -> query($add_user_query);
+    $connection->query($add_user_query);
 
     set_message('Пользователь создан');
     back();

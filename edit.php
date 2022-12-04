@@ -53,6 +53,10 @@ include('backend/globalFunctions.php');
               <label class='popup__label'>
                 <input name='password' value='$password'/>
               </label>
+              Шифорвание:
+              <label>
+                <input type='checkbox' name='sha'>
+              </label>
             </div>
             <div class='line'>
               Role:
